@@ -33,6 +33,6 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
      * @param db
      */
     private void createEmptyTables(SQLiteDatabase db) {
-        db.execSQL("CREATE TABLE NOTE(name TEXT PRIMARY KEY, note TEXT)");
+        db.execSQL("CREATE TABLE NOTE(name TEXT PRIMARY KEY, note_contents TEXT)");
     }
 }

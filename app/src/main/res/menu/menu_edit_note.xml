@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activity.NoteViewOrEditActivity">
+
+    <item
+        android:title="@string/edit"
+        android:id="@+id/action_edit_note"
+        android:orderInCategory="101"
+        android:icon="@drawable/ic_edit_black_24dp"
+        android:checkable="true"
+        app:showAsAction="always" />
+
+    <item
+        android:title="@string/view"
+        android:id="@+id/action_view_note"
+        android:orderInCategory="102"
+        android:icon="@drawable/ic_local_library_black_24dp_checked"
+        android:checkable="true"
+        android:checked="true"
+        app:showAsAction="always" />
+
+</menu>

@@ -2,10 +2,12 @@ package meojike.com.android_sqlite_notes.database;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 import java.util.List;
 
 public class MyDatabaseManager {
+    private static final String TAG = "MyDatabaseManager";
 
     private static MyDatabaseManager myDatabaseManagerInstance;
 
@@ -43,7 +45,7 @@ public class MyDatabaseManager {
      * @return названия всех заметок
      */
     public List<String> getNames() {
-        return noteDao.getNames(databaseHelper.getReadableDatabase());
+        return noteDao.getNotesNames(databaseHelper.getReadableDatabase());
     }
 
 
@@ -52,7 +54,7 @@ public class MyDatabaseManager {
      *
      * @param note - note to be added
      */
-    public Long addNote(final NoteDataModel note) {
+    public long addNote(final NoteDataModel note) {
         return noteDao.addNote(databaseHelper.getWritableDatabase(), note);
     }
 
